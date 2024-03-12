@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive multipage education website using html,css and javascript</title>
+    <!--ICONSCOUT CDN-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!--GOOGLE FONTS (MONTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossoright>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        body{
+            background-image: url("data:image/jpeg;base64,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");
+        }
+        .courses{
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html"><h4>EGATOR</h4></a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+
+        </div>
+    </nav>
+    <!--=================== END OF NAVBAR =========================-->
+
+
+
+
+
+
+
+    <section class="contact">
+        <div class="container contact__container">
+            <aside class="contact__aside">
+                <div class="aside__image">
+                    <img src="data:image/jpeg;base64,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">
+                </div>
+                <h2>Contact Us</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                     Incidunt quod quae quam corporis odit sequi debitis 
+                     consequuntur aliquid obcaecati vero, eaque aspernatur 
+                     ducimus corrupti iste fugit numquam vel quis maxime.
+                </p>
+                <ul class="contact__details">
+                    <li>
+                        <i class="uil uil-phone-times"></i>
+                        <h5>+2335523456789</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>support@egattor.com</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Accra, Ghana</h5>
+                    </li>
+                </ul>
+                <ul class="contact__socials">
+                    <li><a href="https://facebook.com"><i class="uil uil-facebook-f"></i></a></li>
+                    <li><a href="https://instagram.com"><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="uil uil-twitter"></i></a></li>
+                    <li><a href="https://linkedin.com"><i class="uil uil-linkedin-alt"></i></a></li>
+                </ul>
+            </aside>
+
+            <form action="https://formspree.io/f/xqkvajea" method="POST" class="contact__form">
+                <div class="form__name">
+                    <input type="text" name="First Name" placeholder="First Name" required>
+                    <input type="text" name="Last Name" placeholder="Last Name" required>
+
+                </div>
+                <input type="email" name="Email Address" placeholder="Your Email Address" required>
+                <textarea name="Message" rows="7" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>EGATOR</h4></a>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Error doloribus adipisci non aliquid quis eaque ad.
+                </p>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+01 234 567 8910</p>
+                    <p>shakir260@gmail.com</p>
+                </div>
+
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__copyright">
+                <small>Copyright &copy; EGATOR YouTube Tutorials</small>
+            </div>
+        </div>
+     </footer>
+
+    
+
+
+    <script src="./main.js"></script>
+
+
+</body>
+</html>

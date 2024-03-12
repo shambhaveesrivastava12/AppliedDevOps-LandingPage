@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive multipage education website using html,css and javascript</title>
+    <!--ICONSCOUT CDN-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!--GOOGLE FONTS (MONTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossoright>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        body{
+            background-image: url("data:image/jpeg;base64,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");
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html"><h4>EGATOR</h4></a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+
+        </div>
+    </nav>
+    <!--=================== END OF NAVBAR =========================-->
+
+
+
+
+
+
+
+    <section class="about__achievements">
+        <div class="container about__achievements-container">
+            <div class="about__achievements-left">
+                <img src="https://savviest-blog-assets.storage.googleapis.com/2020/02/achievements--1-.png">
+            </div>
+            <div class="about__achievements-right">
+                <h1>Achievements</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                     Placeat dignissimos labore ex, 
+                     voluptatum amet magni nesciunt illum officiis repudiandae.
+                      Repudiandae at praesentium saepe?
+                       Vitae beatae accusamus pariatur accusantium necessitatibus rem!
+                </p>
+                <div class="achievement__card">
+                    <article class="achievement__card">
+                        <span class="achievement__icon">
+                            <i class="uil uil-video"></i>
+                        </span>
+                        <h3>450+</h3>
+                        <p>Courses</p>
+                    </article>
+
+                    <article class="achievement__card">
+                        <span class="achievement__icon">
+                            <i class="uil uil-users-alt"></i>
+                        </span>
+                        <h3>79000+</h3>
+                        <p>Students</p>
+                    </article>
+
+                    <article class="achievement__card">
+                        <span class="achievement__icon">
+                            <i class="uil uil-trophy"></i>
+                        </span>
+                        <h3>26</h3>
+                        <p>Awards</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--=================== END OF ACHIEVEMENTS =========================-->
+
+     <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="container team__container">
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/premium-photo/pretty-indian-asian-young-college-girl-holding-books-bag-while-standing-isolated-white-background_466689-18230.jpg?size=626&ext=jpg">
+                </div>
+                <div class="team__member-info">
+                    <h4>Shatta Wale</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/smiley-pregnant-woman-holding-clipboard-pointing-up-with-copy-space_23-2148765097.jpg?size=626&ext=jpg">
+                </div>
+                <div class="team__member-info">
+                    <h4>Mia Jones</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/smart-good-looking-creative-young-brunette-girl-giving-advice-pointing-upper-left-corner-suggest-promo-smiling-pleased-approve-some-product-standing-white-background_176420-36871.jpg?size=626&ext=jpg">
+                </div>
+                <div class="team__member-info">
+                    <h4>Diana Ayi</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/friendly-confident-woman-writing-her-organizer-isolated-white-wall_231208-1176.jpg?size=626&ext=jpg">
+                </div>
+                <div class="team__member-info">
+                    <h4>John Dumelo</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/front-view-young-beautiful-lady-red-t-shirt-black-jeans-holding-different-copybooks-files-smiling-with-bag-white_140725-18639.jpg?size=626&ext=jpg">
+                </div>
+                <div class="team__member-info">
+                    <h4>Ruth Shockings</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/smiley-woman-holding-book-front-view_23-2149915887.jpg?w=360&t=st=1690110633~exp=1690111233~hmac=bba76247e310ffdf2c78303a71774ee99440d741ee237e78856fa204081cb07f">
+                </div>
+                <div class="team__member-info">
+                    <h4>Edem Quist</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/young-smiling-confident-woman-using-laptop-computer-looking-camera-isolated-white-background_231208-9497.jpg?size=626&ext=jpg&ga=GA1.1.1382109928.1690109796&semt=sph">
+                </div>
+                <div class="team__member-info">
+                    <h4>Lila James</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            <article class="team__member">
+                <div class="team__member-image">
+                    <img src="https://img.freepik.com/free-photo/red-haired-lady-eyeglasses-holds-books-shows-ok-sign_197531-23789.jpg?size=626&ext=jpg&ga=GA1.2.1382109928.1690109796&semt=sph">
+                </div>
+                <div class="team__member-info">
+                    <h4>Menz Gold</h4>
+                    <p>Expert Tutor</p>
+                </div>
+                <div class="team__member-socials">
+                    <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+            </article>
+
+            
+        </div>
+     </section>
+
+      <!--=================== END OF TEAM =========================-->
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>EGATOR</h4></a>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Error doloribus adipisci non aliquid quis eaque ad.
+                </p>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+01 234 567 8910</p>
+                    <p>shakir260@gmail.com</p>
+                </div>
+
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__copyright">
+                <small>Copyright &copy; EGATOR YouTube Tutorials</small>
+            </div>
+        </div>
+     </footer>
+
+    
+
+
+    <script src="./main.js"></script>
+
+
+</body>
+</html>
