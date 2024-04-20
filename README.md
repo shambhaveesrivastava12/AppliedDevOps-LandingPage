@@ -1,3 +1,3 @@
 # My DevSecOps Pipeline
 
-This repository contains my DevSecOps pipeline. Hello my name is khan
+This repository contains my DevSecOps pipeline. Hello my
