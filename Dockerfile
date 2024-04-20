@@ -13,8 +13,9 @@ RUN npm install && npm install react-scripts --save-dev
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Add the build script to package.json if it's not already included
-RUN jq -r '.scripts.build' package.json || echo '{ "scripts": { "build": "react-scripts build" } }' | jq '.scripts.build = "react-scripts build"' > temp.json && mv temp.json package.json
+# Add the "build" script to package.json if it's not already included
+RUN grep -q '"build":' package.json || \
+    sed -i '/"scripts": {/a\    "build": "react-scripts build",' package.json
 
 # Run npm install and npm run build
 RUN npm install && npm run build
