@@ -20,4 +20,4 @@ spec:
           image: shambhaveesrivastava12/university-page:latest
           imagePullPolicy: "Always"
           ports:
-            - containerPort: "3000"
+            - containerPort: 3000
