@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+# Add the build script if it's not included in package.json
+RUN echo '{"scripts": {"build": "react-scripts build"}}' > package.json
+
 # Build the React app
 RUN npm run build
 
