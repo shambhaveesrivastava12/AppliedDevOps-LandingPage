@@ -7,14 +7,14 @@ WORKDIR /app
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install app dependencies, including Material-UI 5
+# Install app dependencies
 RUN npm install
+
+# Install react-scripts globally to ensure it's available
+RUN npm install -g react-scripts@latest
 
 # Copy the rest of the application code to the working directory
 COPY . .
-
-# Ensure that the "build" script is defined in package.json
-RUN echo '{"scripts": {"start": "react-scripts start", "build": "react-scripts build"}}' > package.json
 
 # Run the build command
 RUN npm run build
