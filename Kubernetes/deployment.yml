@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: youtube-clone-app
+  name: university-page
   labels:
-    app: youtube-clone-app
+    app: university-page
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: youtube-clone-app
+      app: university-page
   template:
     metadata:
       labels:
-        app: youtube-clone-app
+        app: university-page
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-        - name: youtube-clone-app
-          image: ashfaque9x/youtube-clone:latest
+        - name: university-page
+          image: shambhaveesrivastava12/university-page:latest
           imagePullPolicy: "Always"
           ports:
             - containerPort: 3000
