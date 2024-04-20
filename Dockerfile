@@ -13,11 +13,11 @@ RUN npm install && npm install react-scripts --save-dev
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Add the build script directly in the Dockerfile
-RUN echo "npm install && npm run build" > build.sh && chmod +x build.sh
+# Add the build script to package.json if it's not already included
+RUN jq -r '.scripts.build' package.json || echo '{ "scripts": { "build": "react-scripts build" } }' | jq '.scripts.build = "react-scripts build"' > temp.json && mv temp.json package.json
 
-# Execute the build script
-RUN ./build.sh
+# Run npm install and npm run build
+RUN npm install && npm run build
 
 # Expose the port that the app will run on (adjust if needed)
 EXPOSE 3000
